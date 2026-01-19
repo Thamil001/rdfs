@@ -1,0 +1,51 @@
+{
+  "name": "rdfs",
+  "displayName": "React Development Folder Structure",
+  "publisher": "ThamilThennarasu",
+  "version": "0.0.1",
+  "description": "React folder management for developers",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thamil001/rdfs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Thamil001/rdfs/issues"
+  },
+  "homepage": "https://github.com/Thamil001/rdfs",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rdfs.toggleDevFolders",
+        "title": "Toggle React Dev Folders"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "React Dev Folder Settings",
+      "properties": {
+        "rdfs.hiddenItems": {
+          "type": "object",
+          "default": {
+            "**/node_modules": true,
+            "**/dist": true,
+            "**/build": true,
+            "**/README.md": true,
+            "**/package.json": true,
+            "**/package-lock.json": true,
+            "**/eslint.config.js": true,
+            "**/vite.config.js": true,
+            "**/.gitignore": true
+          },
+          "description": "Choose which files/folders should be hidden in React Dev Mode"
+        }
+      }
+    }
+  }
+}
