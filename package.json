@@ -1,15 +1,14 @@
 {
   "name": "rdfs",
-  "displayName": "React Development Folder Structure",
+  "displayName": "React Dev Folders",
   "publisher": "ThamilThennarasu",
   "version": "0.0.1",
   "description": "React folder management for developers",
-  "icon": "icon.png",
+  "main": "./out/extension.js",
+  "icon": "./extension/icon.png",
   "keywords": [
     "react",
     "rdfs",
-    "RDFS",
-    "rdfs plugin",
     "devfolder",
     "folder",
     "dev",
@@ -31,6 +30,9 @@
     "url": "https://github.com/Thamil001/rdfs/issues"
   },
   "homepage": "https://github.com/Thamil001/rdfs",
+  "activationEvents": [
+    "onCommand:rdfs.toggleDevFolders"
+  ],
   "contributes": {
     "commands": [
       {
