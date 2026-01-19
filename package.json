@@ -5,6 +5,18 @@
   "version": "0.0.1",
   "description": "React folder management for developers",
   "icon": "icon.png",
+  "keywords": [
+    "react",
+    "rdfs",
+    "RDFS",
+    "rdfs plugin",
+    "devfolder",
+    "folder",
+    "dev",
+    "folders",
+    "workspace",
+    "toggle"
+  ],
   "engines": {
     "vscode": "^1.80.0"
   },
