@@ -6,21 +6,21 @@ A VS Code extension that helps React developers hide unnecessary files and folde
 
 ## ✨ Features
 
-- Toggle React dev mode using a status bar button
-- Automatically detects React projects
-- Hides build & config files to keep workspace clean
-- Allows user configuration of hidden items
-- Shows only essential folders (`src`, `public`)
+- Toggle workspace visibility through the Command Palette
+- Shows only essential folders like src and public
+- Hides build, config, and dependency folders
 - Works with any React-based project (Vite, CRA, Next.js with config)
 
 ---
 
 ## 🔧 Usage
 
-1. Open a React project
-2. Look at the bottom toolbar → Click **React Dev Off**
-3. It will hide unneeded files
-4. Click again to toggle back
+1. Open a React project in VS Code
+2. Press Ctrl + Shift + P to open the Command Palette
+3. Type "Rdfs"
+4. Select "Rdfs: Toggle Folder Visibility" and press Enter
+5. The workspace will instantly hide non-essential folders
+6. Repeat the command to revert visibility back to normal
 
 ---
 

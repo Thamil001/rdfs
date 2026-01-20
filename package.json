@@ -2,7 +2,7 @@
   "name": "rdfs",
   "displayName": "React Dev Folders",
   "publisher": "ThamilThennarasu",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "React folder management for developers",
   "main": "./out/extension.js",
   "icon": "./extension/icon.png",
@@ -17,7 +17,7 @@
     "toggle"
   ],
   "engines": {
-    "vscode": "^1.80.0"
+    "vscode": "^1.108.0"
   },
   "categories": [
     "Other"
@@ -30,14 +30,11 @@
     "url": "https://github.com/Thamil001/rdfs/issues"
   },
   "homepage": "https://github.com/Thamil001/rdfs",
-  "activationEvents": [
-    "onCommand:rdfs.toggleDevFolders"
-  ],
   "contributes": {
     "commands": [
       {
         "command": "rdfs.toggleDevFolders",
-        "title": "Toggle React Dev Folders"
+        "title": "Rdfs"
       }
     ],
     "configuration": {
@@ -60,6 +57,24 @@
           "description": "Choose which files/folders should be hidden in React Dev Mode"
         }
       }
-    }
+    },
+    "keybindings": [
+      {
+        "command": "rdfs.toggleDevFolders",
+        "key": "ctrl+alt+r",
+        "mac": "cmd+alt+r",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "@types/vscode": "^1.108.1",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
   }
 }
