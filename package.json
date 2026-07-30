@@ -1,0 +1,86 @@
+{
+	"name": "rdfs",
+	"displayName": "React Dev Folders",
+	"publisher": "ThamilthennarasuM",
+	"version": "1.1.1",
+	"description": "React folder management for developers",
+	"main": "./out/extension.js",
+	"icon": "./extension/icon.png",
+	"keywords": [
+		"react",
+		"rdfs",
+		"devfolder",
+		"folder",
+		"workspace",
+		"toggle"
+	],
+	"engines": {
+		"vscode": "^1.85.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Thamil001/rdfs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Thamil001/rdfs/issues"
+	},
+	"homepage": "https://github.com/Thamil001/rdfs",
+	"contributes": {
+		"commands": [
+			{
+				"command": "rdfs.toggleDevFolders",
+				"title": "Rdfs"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "React Dev Folder Settings",
+			"properties": {
+				"rdfs.hiddenItems": {
+					"type": "object",
+					"default": {
+						"**/node_modules": true,
+						"**/dist": true,
+						"**/build": true,
+						"**/README.md": true,
+						"**/package.json": true,
+						"**/package-lock.json": true,
+						"**/eslint.config.js": true,
+						"**/vite.config.js": true,
+						"**/.gitignore": true,
+						"**/vite.config.ts": true,
+						"**/.env": true,
+						"**/tsconfig*.json": true
+					},
+					"description": "Choose which files/folders should be hidden in React Dev Mode"
+				}
+			}
+		},
+		"keybindings": [
+			{
+				"command": "rdfs.toggleDevFolders",
+				"key": "ctrl+alt+r",
+				"mac": "cmd+alt+r",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.0",
+		"@types/vscode": "^1.85.0",
+		"typescript": "^5.3.3"
+	},
+	"__metadata": {
+		"installedTimestamp": 1785429049926,
+		"targetPlatform": "undefined",
+		"size": 822535
+	}
+}
